@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroViewController" customModule="MineSweeper" customModuleProvider="target">
+            <connections>
+                <outlet property="leftBarIcon" destination="MnC-58-5JU" id="YtK-bz-9gK"/>
+                <outlet property="mainMineImage" destination="Ufz-9M-itV" id="jTe-eY-vCT"/>
+                <outlet property="rightBarIcon" destination="fj8-sX-EhG" id="m6W-v5-cjH"/>
+                <outlet property="startButton" destination="kD2-ww-apo" id="bRM-VP-T0x"/>
+                <outlet property="titleLabel" destination="YMo-dK-xeP" id="28d-Nt-jzn"/>
+                <outlet property="titleMineImage" destination="yfd-eH-bo2" id="3Zp-2v-8pV"/>
+                <outlet property="topBarImage" destination="YFO-Tf-lWb" id="4vS-47-afa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landmine" translatesAutoresizingMaskIntoConstraints="NO" id="Ufz-9M-itV">
+                    <rect key="frame" x="200" y="200" width="200" height="200"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="C87-VH-uQq"/>
+                        <constraint firstAttribute="height" constant="200" id="fsh-9b-dLc"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFO-Tf-lWb">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="QhN-qs-P5r"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dBv-3B-SPX"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MnC-58-5JU">
+                    <rect key="frame" x="12" y="23" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="NH5-8b-nE4"/>
+                        <constraint firstAttribute="width" constant="33" id="O97-XO-FOs"/>
+                    </constraints>
+                    <state key="normal" image="settings"/>
+                    <connections>
+                        <action selector="sideTapped:" destination="-1" eventType="touchUpInside" id="Qqj-Ld-GPp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kD2-ww-apo">
+                    <rect key="frame" x="215" y="491" width="170" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="I56-4v-27V"/>
+                        <constraint firstAttribute="height" constant="55" id="S4t-s7-JNo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="23"/>
+                    <state key="normal" title="START GAME" backgroundImage="skyBar">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.01117110535" green="0.01419530361" blue="0.018426865180000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="startGame:" destination="-1" eventType="touchUpInside" id="DjE-5y-ejO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj8-sX-EhG">
+                    <rect key="frame" x="553" y="23" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="HJm-2g-pAG"/>
+                        <constraint firstAttribute="width" constant="35" id="hIr-zf-h50"/>
+                    </constraints>
+                    <state key="normal" image="infoIcon"/>
+                    <connections>
+                        <action selector="scoreTapped:" destination="-1" eventType="touchUpInside" id="EFi-Re-dAx"/>
+                    </connections>
+                </button>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYS-V0-sdL">
+                    <rect key="frame" x="275" y="156" width="50" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="5rF-xH-lIu"/>
+                        <constraint firstAttribute="width" constant="50" id="RBP-HZ-LO3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landmine" translatesAutoresizingMaskIntoConstraints="NO" id="yfd-eH-bo2">
+                    <rect key="frame" x="389" y="118" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="6cz-Op-BYm"/>
+                        <constraint firstAttribute="width" constant="64" id="AcB-wN-h5x"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MineSweeper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMo-dK-xeP">
+                    <rect key="frame" x="151" y="101" width="300" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="TZd-fh-yyk"/>
+                        <constraint firstAttribute="height" constant="55" id="wtV-3l-2Re"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="46"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="nYS-V0-sdL" firstAttribute="top" secondItem="YMo-dK-xeP" secondAttribute="bottom" id="0lQ-ap-kdi"/>
+                <constraint firstItem="Ufz-9M-itV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3wm-Lc-pjk"/>
+                <constraint firstItem="fj8-sX-EhG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="8pV-R7-1sf"/>
+                <constraint firstItem="yfd-eH-bo2" firstAttribute="top" secondItem="YFO-Tf-lWb" secondAttribute="bottom" constant="53" id="BB3-ZF-fs8"/>
+                <constraint firstItem="YFO-Tf-lWb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="R5p-2F-aKQ"/>
+                <constraint firstItem="Ufz-9M-itV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="V37-6j-qUT"/>
+                <constraint firstAttribute="trailing" secondItem="fj8-sX-EhG" secondAttribute="trailing" constant="12" id="ZBu-BU-ft6"/>
+                <constraint firstAttribute="bottom" secondItem="kD2-ww-apo" secondAttribute="bottom" constant="54" id="dcd-rm-Wjd"/>
+                <constraint firstItem="YMo-dK-xeP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="1" id="dzV-Ol-5wH"/>
+                <constraint firstItem="kD2-ww-apo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="j1g-h6-2sU"/>
+                <constraint firstItem="YFO-Tf-lWb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="j4A-YT-Tz5"/>
+                <constraint firstItem="yfd-eH-bo2" firstAttribute="leading" secondItem="nYS-V0-sdL" secondAttribute="trailing" constant="64" id="o2Q-9C-xh3"/>
+                <constraint firstAttribute="trailing" secondItem="YFO-Tf-lWb" secondAttribute="trailing" id="o6y-Nh-9hu"/>
+                <constraint firstItem="YMo-dK-xeP" firstAttribute="top" secondItem="YFO-Tf-lWb" secondAttribute="bottom" constant="36" id="o9G-UI-WGf"/>
+                <constraint firstItem="MnC-58-5JU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="23" id="qjD-vu-wrt"/>
+                <constraint firstItem="nYS-V0-sdL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sYF-iv-JH1"/>
+                <constraint firstItem="MnC-58-5JU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="t0k-u5-eNB"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <point key="canvasLocation" x="233" y="346"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="infoIcon" width="256" height="256"/>
+        <image name="landmine" width="300" height="292"/>
+        <image name="settings" width="256" height="256"/>
+        <image name="skyBar" width="842" height="151"/>
+    </resources>
+</document>
